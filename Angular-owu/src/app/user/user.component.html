@@ -1,0 +1,45 @@
+<ngb-accordion>
+  <ngb-panel [title]="user.name">
+    <ng-template ngbPanelContent>
+      <div class="container d-flex justify-content-around">
+        <div class="col-3">
+          <ngb-accordion>
+            <ngb-panel title="General info">
+              <ng-template ngbPanelContent >
+                <div><b>Id:</b> {{ user.id }}</div>
+                <div><b>Email:</b> {{ user.email }}</div>
+                <div><b>Phone:</b> {{ user.phone }}</div>
+                <div><b>Website:</b> {{ user.website }}</div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+        <div class="col-3">
+          <ngb-accordion>
+            <ngb-panel title="Address-info">
+              <ng-template ngbPanelContent>
+                <div><b>Zip:</b> {{ user.address.zipcode }}</div>
+                <div><b>City:</b> {{ user.address.city }}</div>
+                <div><b>Street:</b> {{ user.address.street }}</div>
+                <div><b>Suite:</b> {{ user.address.suite }}</div>
+                <div><b>Geo lat:</b> {{ user.address.geo.lat }}</div>
+                <div><b>Geo lng:</b> {{ user.address.geo.lng }}</div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+        <div class="col-3">
+          <ngb-accordion>
+            <ngb-panel title="Company-info">
+              <ng-template ngbPanelContent>
+                <div><b>Name:</b> {{ user.company.name }}</div>
+                <div><b>Bs:</b> {{ user.company.bs }}</div>
+                <div><b>Catch-phrase:</b> {{ user.company.catchPhrase }}</div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
