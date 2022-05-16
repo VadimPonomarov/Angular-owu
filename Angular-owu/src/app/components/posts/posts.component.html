@@ -1,7 +1,14 @@
-<ngb-accordion type="secondary">
-  <ngb-panel [title]="userId ? 'POSTS of USER : '+ userId : '100 POSTS' ">
-    <ng-template ngbPanelContent>
-      <app-post *ngFor="let post of posts" [post]="post"></app-post>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+<div class="d-flex border justify-content-around">
+  <div class="col-6">
+    <ngb-accordion type="secondary">
+      <ngb-panel [title]="userId ? 'POSTS of USER : '+ userId : '100 POSTS' ">
+        <ng-template ngbPanelContent>
+          <app-post *ngFor="let post of posts" [post]="post"></app-post>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+  <div class="d-flex col-6 justify-content-center p-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>

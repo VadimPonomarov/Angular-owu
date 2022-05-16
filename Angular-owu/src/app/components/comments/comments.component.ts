@@ -11,11 +11,19 @@ import {JphEnum} from "../../constants/jph.enum";
 })
 export class CommentsComponent implements OnInit {
   comments: IComment[];
+  postId: number | null;
 
   constructor(private jsonplaceholderService: JsonplaceholderService) {
   }
 
   ngOnInit(): void {
+    const postId = history.state["postId"];
+    if (postId) {
+      this.postId = postId;
+      this.jsonplaceholderService.getAllCommentsForPostId(postId)
+        .subscribe(comments => this.comments = comments);
+      return;
+    }
     this.jsonplaceholderService.getAll<IComment>(JphEnum.COMMENTS)
       .subscribe(comments => this.comments = comments);
   }

@@ -1,9 +1,9 @@
 import {Component, OnInit} from "@angular/core";
+import {Router} from "@angular/router";
 
 import {IPost} from "../../interfaces/post.interface";
 import {JsonplaceholderService} from "../../services/jsonplaceholder.service";
 import {JphEnum} from "../../constants/jph.enum";
-import {Router} from "@angular/router";
 
 @Component({
   selector: "app-posts",

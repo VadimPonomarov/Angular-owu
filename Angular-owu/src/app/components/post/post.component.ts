@@ -1,4 +1,5 @@
 import {Component, Input} from "@angular/core";
+import {Router} from "@angular/router";
 
 import {IPost} from "../../interfaces/post.interface";
 
@@ -10,6 +11,10 @@ import {IPost} from "../../interfaces/post.interface";
 export class PostComponent {
   @Input() post: IPost;
 
-  constructor() {
+  constructor(private router: Router) {
+  }
+
+  handleClick($event: MouseEvent) {
+    this.router.navigate(["comments"], {state: {postId: this.post.id}});
   }
 }

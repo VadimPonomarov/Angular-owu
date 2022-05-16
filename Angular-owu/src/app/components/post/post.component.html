@@ -1,3 +1,4 @@
+<a [routerLink]="['post', post.id]" [state]="{data:post}">Details</a>
 <ngb-accordion>
   <ngb-panel [title]="'ID: '+post.id + ' ' + post.title">
     <ng-template ngbPanelContent>
@@ -7,6 +8,8 @@
         <b>{{ post.title.toUpperCase() }}</b>
         <div>{{ post.body }}</div>
       </div>
+      <button (click)="handleClick($event)">Comments</button>
     </ng-template>
   </ngb-panel>
 </ngb-accordion>
+

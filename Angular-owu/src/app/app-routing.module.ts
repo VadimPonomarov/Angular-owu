@@ -5,6 +5,8 @@ import {UsersComponent} from "./components/users/users.component";
 import {UserDetailsComponent} from "./components/user-details/user-details.component";
 import {PostsComponent} from "./components/posts/posts.component";
 import {CommentsComponent} from "./components/comments/comments.component";
+import {PostDetailsComponent} from "./components/post-details/post-details.component";
+import {CommentDetailsComponent} from "./components/comment-details/comment-details.component";
 
 const routes: Routes = [
     {
@@ -14,8 +16,16 @@ const routes: Routes = [
             {path: "user/:id", component: UserDetailsComponent}
           ]
         },
-        {path: "posts", component: PostsComponent},
-        {path: "comments", component: CommentsComponent}
+        {
+          path: "posts", component: PostsComponent, children: [
+            {path: "post/:postId", component: PostDetailsComponent}
+          ]
+        },
+        {
+          path: "comments", component: CommentsComponent, children: [
+            {path: "comment/:commentId", component: CommentDetailsComponent}
+          ]
+        }
       ],
 
     }

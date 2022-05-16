@@ -13,6 +13,8 @@ import {CommentsComponent} from "./components/comments/comments.component";
 import {CommentComponent} from "./components/comment/comment.component";
 import {MainLayoutComponent} from "./components/layouts/main-layout/main-layout.component";
 import {UserDetailsComponent} from "./components/user-details/user-details.component";
+import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {UserDetailsComponent} from "./components/user-details/user-details.compo
     CommentsComponent,
     CommentComponent,
     MainLayoutComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    PostDetailsComponent,
+    CommentDetailsComponent
   ],
   imports: [
     BrowserModule,

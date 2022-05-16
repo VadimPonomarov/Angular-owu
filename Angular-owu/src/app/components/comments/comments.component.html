@@ -1,5 +1,5 @@
 <ngb-accordion type="secondary">
-  <ngb-panel title="COMMENTS">
+  <ngb-panel [title]="postId ? 'COMMENTS for POST: ' + postId : '500 COMMENTS'">
     <ng-template ngbPanelContent>
       <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
     </ng-template>
