@@ -1,7 +1,3 @@
-<ngb-accordion type="secondary">
-  <ngb-panel title="USERS" >
-    <ng-template ngbPanelContent>
-      <app-user *ngFor="let user of users" [user]="user"></app-user>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+<app-user *ngFor="let user of users" [user]="user"></app-user>
+<router-outlet></router-outlet>
+

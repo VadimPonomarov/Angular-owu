@@ -2,6 +2,7 @@
   <ngb-panel [title]="'ID: '+post.id + ' ' + post.title">
     <ng-template ngbPanelContent>
       <div class="text-center">
+        <div>User: {{ post.userId }}</div>
         <div>ID: {{ post.id }}</div>
         <b>{{ post.title.toUpperCase() }}</b>
         <div>{{ post.body }}</div>

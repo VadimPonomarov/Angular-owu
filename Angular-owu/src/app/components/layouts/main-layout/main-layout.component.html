@@ -1,0 +1,20 @@
+<div
+  class="
+  container-fluid
+  d-flex
+  justify-content-center
+  border bg-warning"
+>
+  <ul #nav="ngbNav" ngbNav>
+    <li [ngbNavItem]="1">
+      <a [routerLink]="['']" ngbNavLink>Users</a>
+    </li>
+    <li [ngbNavItem]="2">
+      <a [routerLink]="['posts']" ngbNavLink>Posts</a>
+    </li>
+    <li [ngbNavItem]="3">
+      <a [routerLink]="['comments']" ngbNavLink>Comments</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
